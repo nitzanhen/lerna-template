@@ -1,5 +1,6 @@
 {
   "name": "lerna-template",
+  "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "eslint": "^7.27.0",
