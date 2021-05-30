@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "clean:build": "rimraf ./build && rimraf .cache",
+    "prebuild": "yarn run clean:build",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit --pretty"
   },
   "dependencies": {
     "react": "^17.0.0",
