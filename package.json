@@ -5,6 +5,7 @@
   "devDependencies": {
     "eslint": "^7.27.0",
     "lerna": "^3.22.1",
+    "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.3.2"
   },
@@ -16,6 +17,8 @@
     "dev": "lerna run dev --parallel",
     "dev:client": "lerna run dev --scope @template/common --scope @template/client --parallel",
     "dev:backend": "lerna run dev --scope @template/common --scope @template/backend --parallel",
+    "prettier": "prettier --check \"packages/*/src/**/*{.ts,.tsx}\"",
+    "prettier:fix": "prettier --write \"packages/*/src/**/*{.ts,.tsx}\"",
     "typecheck": "lerna run typecheck --parallel"
   },
   "workspaces": [
