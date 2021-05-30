@@ -1,18 +1,22 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "ESNext",
-    "noEmit": true,
     "rootDir": "src",
     "outDir": "build",
-    "jsx": "react"
+    //Needed because of the popular Express `return res.send(...)` pattern
+    "noImplicitReturns": false,
   },
   "include": [
-    "./src"
+    "src",
+  ],
+  "exclude": [
+    "../../node_modules",
+    "node_modules",
+    "build"
   ],
   "references": [
     {
       "path": "../common/tsconfig.json"
-    }
+    },
   ]
 }

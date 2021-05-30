@@ -1,0 +1,24 @@
+{
+  "name": "@template/backend",
+  "description": "Backend module",
+  "version": "0.1.0",
+  "main": "src/server.ts",
+  "private": "true",
+  "scripts": {
+    "start": "node build/server.js",
+    "prebuild": "yarn run clean:build",
+    "build": "tsc -p tsconfig.json --pretty",
+    "clean:build": "rimraf ./build && rimraf .cache --colors",
+    "dev": "tsc-watch -b --onSuccess \"node build/server.js\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit --pretty"
+  },
+  "devDependencies": {
+    "@template/common": "^0.1.0",
+    "@types/express": "^4.17.12",
+    "tsc-watch": "^4.4.0"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
